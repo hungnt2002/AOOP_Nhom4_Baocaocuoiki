@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class HashMapMenu extends Menu {
 
-    private Map<String, MenuComponent> menuComponents = new HashMap<String, MenuComponent>();
-
+    private Map<Integer, MenuComponent> menuComponents = new HashMap<Integer, MenuComponent>();
+    private int key = 0;
     public HashMapMenu(String name, String description) {
         super(name, description);
     }
@@ -15,12 +15,13 @@ public class HashMapMenu extends Menu {
     @Override
     public void add(MenuComponent menuComponent) {
         // TODO Auto-generated method stub
-        menuComponents.put(menuComponent.getName(), menuComponent);
+        menuComponents.put(key, menuComponent);
+        key++;
     }
 
     @Override
     public Iterator<MenuComponent> createIterator() {
-        return new CompositeIterator(menuComponents.values().iterator());
+        return menuComponents.values().iterator();
     }
 
 }

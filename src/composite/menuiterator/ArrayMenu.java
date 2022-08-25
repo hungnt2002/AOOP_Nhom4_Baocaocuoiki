@@ -3,7 +3,7 @@ package composite.menuiterator;
 import java.util.Iterator;
 
 public class ArrayMenu extends Menu {
-    private static final int MAX_ITEMS = 100;
+    static final int MAX_ITEMS = 100;
     private int numberOfItems = 0;
     private MenuComponent[] menuItems = new MenuComponent[MAX_ITEMS];
 
@@ -25,7 +25,7 @@ public class ArrayMenu extends Menu {
 
     @Override
     public Iterator<MenuComponent> createIterator() {
-        return new CompositeIterator(new ArrayMenuIterator(menuItems));
+        return new ArrayMenuIterator(menuItems);
     }
 
 }

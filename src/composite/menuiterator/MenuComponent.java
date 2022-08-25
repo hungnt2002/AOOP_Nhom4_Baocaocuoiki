@@ -28,6 +28,10 @@ public abstract class MenuComponent {
 	}
 
 	public abstract Iterator createIterator();
+
+	public  Iterator createComposiIterator(Iterator iterator){
+		throw new UnsupportedOperationException();
+	}
  
 	public void print() {
 		throw new UnsupportedOperationException();

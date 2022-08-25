@@ -34,6 +34,11 @@ public class Menu extends MenuComponent {
 	}
 
 	@Override
+	public Iterator createComposiIterator(Iterator iterator) {
+		return new CompositeIterator(iterator);
+	}
+
+	@Override
 	public Iterator<MenuComponent> createIterator() {
 		throw new UnsupportedOperationException();
 	}

@@ -31,7 +31,7 @@ public class ArrayListMenu extends Menu {
 
     public Iterator<MenuComponent> createIterator() {
         // return menuComponents.iterator(); // trước khi thay đổi
-        return new CompositeIterator(menuComponents.iterator()); // Sau khi áp dụng CompositeIterator
+        return menuComponents.iterator(); // Sau khi áp dụng CompositeIterator
     }
 
     // other menu methods here

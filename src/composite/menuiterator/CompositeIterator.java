@@ -10,16 +10,14 @@ public class CompositeIterator implements Iterator {
 	}
 
 	public Object next() {
-		if (hasNext()) {
-			Iterator iterator = (Iterator) stack.peek();
-			MenuComponent component = (MenuComponent) iterator.next();
-			if (component instanceof Menu) {
-				stack.push(component.createIterator());
-			}
-			return component;
-		} else {
-			return null;
+
+		Iterator iterator = (Iterator) stack.peek();
+		MenuComponent component = (MenuComponent) iterator.next();
+		if (component instanceof Menu) {
+			stack.push(component.createIterator());
 		}
+		return component;
+
 	}
 
 	public boolean hasNext() {

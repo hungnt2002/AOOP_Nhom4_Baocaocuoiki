@@ -8,13 +8,13 @@ public class MenuTestDrive {
 		MenuComponent pancakeHouseMenu = 
 			new ArrayListMenu("PANCAKE HOUSE MENU", "Breakfast");
 		MenuComponent dinerMenu = 
-			new ArrayListMenu("DINER MENU", "Lunch");
+			new HashMapMenu("DINER MENU", "Lunch");
 		MenuComponent cafeMenu = 
 			new ArrayListMenu("CAFE MENU", "Dinner");
 		MenuComponent dessertMenu = 
-			new ArrayListMenu("DESSERT MENU", "Dessert of course!");
+			new HashMapMenu("DESSERT MENU", "Dessert of course!");
   
-		MenuComponent allMenus = new ArrayListMenu("ALL MENUS", "All menus combined");
+		MenuComponent allMenus = new HashMapMenu("ALL MENUS", "All menus combined");
   
 		allMenus.add(pancakeHouseMenu);
 		allMenus.add(dinerMenu);
@@ -108,6 +108,7 @@ public class MenuTestDrive {
 			4.29));
  
 		Waitress waitress = new Waitress(allMenus);
+		waitress.printMenu();
 		waitress.printVegetarianMenu();
  
 	}
