@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 public class PancakeHouseMenu implements Menu{
-    ArrayList<MenuItem> menuItems;
+    private ArrayList<MenuItem> menuItems;
 
     public PancakeHouseMenu() {
         menuItems = new ArrayList<MenuItem>();
@@ -19,7 +19,6 @@ public class PancakeHouseMenu implements Menu{
     public void addItem(String name, String description,boolean vegetarian, double price)
     {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
-        menuItem.setNameMenu("--------Pancake House Menu--------");
         menuItems.add(menuItem);
     }
 
@@ -29,6 +28,11 @@ public class PancakeHouseMenu implements Menu{
 
     public Iterator<MenuItem> createIterator() {
         return menuItems.iterator();
+    }
+
+    @Override
+    public String getNameMenu() {
+        return "\nPanke House Menu";
     }
 
     // other menu methods here

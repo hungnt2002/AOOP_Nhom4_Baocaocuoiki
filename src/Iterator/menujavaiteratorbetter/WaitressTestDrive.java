@@ -15,6 +15,11 @@ public class WaitressTestDrive {
         menus.add(cafeMenu);
 
         Waitress waitress = new Waitress(menus);
+        System.out.println("\n--ALL Menu");
         waitress.printMenu();
+
+        System.out.println("\n--Menu mon chay");
+        waitress.printVegetarianMenu();
+
     }
 }

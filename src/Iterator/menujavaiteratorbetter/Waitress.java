@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Waitress {
 
-    ArrayList menus;
+    private ArrayList menus;
 
     public Waitress(ArrayList menus) {
         this.menus = menus;
@@ -15,24 +15,42 @@ public class Waitress {
         Iterator menuIterator = menus.iterator();
         while (menuIterator.hasNext()) {
             Menu menu = (Menu) menuIterator.next();
+            System.out.println(menu.getNameMenu());
             printMenu(menu.createIterator());
         }
-
     }
 
     private void printMenu(Iterator<MenuItem> iterator) {
-        String nameMenu = "";
-        System.out.println("");
+
         while (iterator.hasNext()) {
             MenuItem menuItem = iterator.next();
-            if(menuItem.getNameMenu() != nameMenu){
-                nameMenu = menuItem.getNameMenu();
-                System.out.println(nameMenu);
-            }
+            
             System.out.print(menuItem.getName() + ", ");
             System.out.print(menuItem.getPrice() + " -- ");
             System.out.println(menuItem.getDescription());
         }
     }
+
+    public void printVegetarianMenu() {
+        Iterator menuIterator = menus.iterator();
+        while (menuIterator.hasNext()) {
+            Menu menu = (Menu) menuIterator.next();
+            System.out.println(menu.getNameMenu());
+            printVegetarianMenu(menu.createIterator());
+        }
+    }
+
+    private void printVegetarianMenu(Iterator<MenuItem> iterator) {
+        
+        while (iterator.hasNext()) {
+            MenuItem menuItem = iterator.next();
+            if(menuItem.isVegetarian()){
+                System.out.print(menuItem.getName() + ", ");
+                System.out.print(menuItem.getPrice() + " -- ");
+                System.out.println(menuItem.getDescription());
+            }
+        }
+    }
+
     // other methods here
 }

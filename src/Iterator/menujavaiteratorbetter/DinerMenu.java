@@ -3,9 +3,9 @@ package Iterator.menujavaiteratorbetter;
 import java.util.Iterator;
 
 public class DinerMenu implements Menu{
-    static final int MAX_ITEMS = 4;
-    int numberOfItems = 0;
-    MenuItem[] menuItems;
+    private static final int MAX_ITEMS = 4;
+    private int numberOfItems = 0;
+    private MenuItem[] menuItems;
     
     
 
@@ -19,7 +19,6 @@ public class DinerMenu implements Menu{
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
-        menuItem.setNameMenu("--------Diner Menu--------");
 
             if (numberOfItems >= MAX_ITEMS) {
             System.err.println("Sorry, menu is full! Can't add item to menu");
@@ -33,6 +32,11 @@ public class DinerMenu implements Menu{
     @Override
     public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator(menuItems);
+    }
+
+    @Override
+    public String getNameMenu() {
+        return "\nDinner Menu";
     }
 
         // other menu methods here
