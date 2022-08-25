@@ -4,10 +4,10 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 public class MenuItem extends MenuComponent {
-	String name;
-	String description;
-	boolean vegetarian;
-	double price;
+	private String name;
+	private String description;
+	private boolean vegetarian;
+	private double price;
     
 	public MenuItem(String name, 
 	                String description, 

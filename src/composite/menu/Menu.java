@@ -4,9 +4,9 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 public class Menu extends MenuComponent {
-	ArrayList menuComponents = new ArrayList();
-	String name;
-	String description;
+	private ArrayList menuComponents = new ArrayList();
+	private String name;
+	private String description;
   
 	public Menu(String name, String description) {
 		this.name = name;

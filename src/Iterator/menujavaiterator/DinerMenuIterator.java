@@ -3,8 +3,8 @@ import java.util.Iterator; //thu vien co san cua java
 
 public class DinerMenuIterator implements Iterator<MenuItem>{
 
-    MenuItem[] items;
-    int position = 0;
+    private MenuItem[] items;
+    private int position = 0;
 
     public DinerMenuIterator(MenuItem[] items) {
     this.items = items;

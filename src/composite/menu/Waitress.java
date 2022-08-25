@@ -3,7 +3,7 @@ package composite.menu;
 import java.util.Iterator;
   
 public class Waitress {
-	MenuComponent allMenus;
+	private MenuComponent allMenus;
  
 	public Waitress(MenuComponent allMenus) {
 		this.allMenus = allMenus;

@@ -2,11 +2,10 @@ package Iterator.menujavaiteratorbetter;
 
 public class MenuItem {
     
-    String nameMenu;
-    String name;
-    String description;
-    boolean vegetarian;
-    double price;
+    private String name;
+    private String description;
+    private boolean vegetarian;
+    private double price;
 
     public MenuItem(String name, String description, boolean vegetarian, double price) {
         this.name = name;
@@ -29,14 +28,6 @@ public class MenuItem {
     
     public boolean isVegetarian() {
         return vegetarian;
-    }
-
-    public String getNameMenu() {
-        return nameMenu;
-    }
-
-    public void setNameMenu(String nameMenu) {
-        this.nameMenu = nameMenu;
     }
 
     public void setName(String name) {

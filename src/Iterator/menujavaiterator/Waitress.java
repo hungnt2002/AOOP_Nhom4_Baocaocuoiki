@@ -2,9 +2,9 @@ package Iterator.menujavaiterator;
 import java.util.Iterator;
 
 public class Waitress {
-    Menu pancakeHouseMenu;
-    Menu dinerMenu;
-    Menu cafeMenu;
+    private Menu pancakeHouseMenu;
+    private Menu dinerMenu;
+    private Menu cafeMenu;
 
     public Waitress(Menu pancakeHouseMenu, Menu dinerMenu, Menu cafeMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;

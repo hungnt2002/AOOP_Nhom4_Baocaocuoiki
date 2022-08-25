@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class CafeMenu implements Menu{
 
-    Map<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
+    private Map<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
 
     public CafeMenu() {
         addItem("Veggie Burger and Air Fries","Veggie burger on a whole wheat bun, lettuce, tomato, and fries",true, 3.99);

@@ -3,9 +3,9 @@ package Iterator.menujavaiterator;
 import java.util.Iterator;
 
 public class DinerMenu implements Menu{
-    static final int MAX_ITEMS = 4;
-    int numberOfItems = 0;
-    MenuItem[] menuItems;
+    private static final int MAX_ITEMS = 4;
+    private int numberOfItems = 0;
+    private MenuItem[] menuItems;
     
     
 

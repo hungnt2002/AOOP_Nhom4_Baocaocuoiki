@@ -1,8 +1,8 @@
 package Iterator.menuiterator;
 
 public class Waitress {
-    PancakeHouseMenu pancakeHouseMenu;
-    DinerMenu dinerMenu;
+    private PancakeHouseMenu pancakeHouseMenu;
+    private DinerMenu dinerMenu;
     public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
