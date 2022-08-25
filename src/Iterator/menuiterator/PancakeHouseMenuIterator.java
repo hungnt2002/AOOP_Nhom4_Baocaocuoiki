@@ -2,7 +2,7 @@ package Iterator.menuiterator;
 
 import java.util.ArrayList;
 
-public class PancakeHouseMenuIterator implements Iterator{
+public class PancakeHouseMenuIterator implements Iterator {
 
     private ArrayList<MenuItem> items = new ArrayList<>();
     private int position = 0;
@@ -15,9 +15,8 @@ public class PancakeHouseMenuIterator implements Iterator{
     public boolean hasNext() {
         if (position >= items.size() || items.get(position) == null) {
             return false;
-        } 
-        else {
-                return true;
+        } else {
+            return true;
         }
     }
 
@@ -27,5 +26,5 @@ public class PancakeHouseMenuIterator implements Iterator{
         position = position + 1;
         return menuItem;
     }
-    
+
 }

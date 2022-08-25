@@ -8,13 +8,13 @@ public class HashMapMenu extends Menu {
 
     private Map<Integer, MenuComponent> menuComponents = new HashMap<Integer, MenuComponent>();
     private int key = 0;
+
     public HashMapMenu(String name, String description) {
         super(name, description);
     }
 
     @Override
     public void add(MenuComponent menuComponent) {
-        // TODO Auto-generated method stub
         menuComponents.put(key, menuComponent);
         key++;
     }

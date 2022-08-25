@@ -1,7 +1,6 @@
 package Iterator.menuiterator;
 
-
-public class DinerMenuIterator implements Iterator{
+public class DinerMenuIterator implements Iterator {
 
     private MenuItem[] items;
     private int position = 0;
@@ -14,9 +13,8 @@ public class DinerMenuIterator implements Iterator{
     public boolean hasNext() {
         if (position >= items.length || items[position] == null) {
             return false;
-        } 
-        else {
-                return true;
+        } else {
+            return true;
         }
     }
 
@@ -26,5 +24,5 @@ public class DinerMenuIterator implements Iterator{
         position = position + 1;
         return menuItem;
     }
-    
+
 }
