@@ -1,7 +1,7 @@
 package Iterator.menuiterator;
 
 public class DinerMenu {
-    private static final int MAX_ITEMS = 4;
+    static final int MAX_ITEMS = 4;
     private int numberOfItems = 0;
     private MenuItem[] menuItems;
 
